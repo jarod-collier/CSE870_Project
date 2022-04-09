@@ -1,9 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+ 
   <head>
-    <title>This is the title of the webpage!</title>
+    <style>
+
+      /* Set display to none for image*/
+      #geekPicID{
+        display: none;
+      }
+
+      #randomPicID{
+        display: none;
+      }
+    </style>
   </head>
+  
   <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <div>
+      <h1>GeeksforGeeks</h1>
+      <h3>Click on the button to see image</h3>
+
+      <!-- Geeks pic -->
+      <img 
+        id="geekPicID" 
+        src="https://media.geeksforgeeks.org/wp-content/uploads/20210915115837/gfg3.png"
+        alt="GFG image" 
+      />
+
+      <!-- Random pic -->
+      <img 
+        id="randomPicID" 
+        src= "https://www.w3schools.com/howto/img_snow.jpg" 
+        alt="GFG image" 
+      />
+    </div>
+  
+    <button type="button"
+      onclick="showGeeks()" id="geekButtonID">
+      Show Geek 
+    </button>
+
+    <button type="button"
+      onclick="showRandom()" id="randomButtonID">
+      Show Random 
+    </button>
+  
+    <script>
+      function showGeeks() {
+
+        /* Access image by id and change
+        the display property to block*/
+        document.getElementById('geekPicID').style.display = "block";
+        document.getElementById('randomPicID').style.display = "none";
+
+        // document.getElementById('geekButtonID').style.display = "none";
+        // document.getElementById('randomButtonID').style.display = "block";
+      }
+
+      function showRandom() {
+
+        /* Access image by id and change
+        the display property to block*/
+        document.getElementById('geekPicID').style.display = "none";
+        document.getElementById('randomPicID').style.display = "block";
+
+        // document.getElementById('geekButtonID').style.display = "none";
+        // document.getElementById('randomButtonID').style.display = "block";
+      }
+      
+    </script>
   </body>
+ 
 </html>
