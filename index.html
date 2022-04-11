@@ -4,68 +4,448 @@
   <head>
     <style>
 
-      /* Set display to none for image*/
-      #geekPicID{
+      #nothingDetectedPic {
         display: none;
       }
 
-      #randomPicID{
+      #nothingDetectedPic2 {
         display: none;
       }
+
+      #nothingDetectedPic3 {
+        display: none;
+      }
+
+      #driverBrakesPic {
+        display: none;
+      }
+
+      #driverBrakesPic2 {
+        display: none;
+      }
+
+      #driverBrakesPic3 {
+        display: none;
+      }
+
+      #systemBrakesPic {
+        display: none;
+      }
+
+      #systemBrakesPic2 {
+        display: none;
+      }
+
+      #systemBrakesPic3 {
+        display: none;
+      }
+
+      #noBrakingPic {
+        display: none;
+      }
+
+      #noBrakingPic2 {
+        display: none;
+      }
+
+      #noBrakingPic3 {
+        display: none;
+      }
+
+      #ShowNextAssetButton {
+        display: none;
+      }
+
+      #ShowPreviousAssetButton {
+        display: none;
+      }
+
     </style>
   </head>
   
   <body>
     <div>
-      <h1>GeeksforGeeks</h1>
-      <h3>Click on the button to see image</h3>
+      <h1>Team CDLM's PBAS Prototype</h1>
+      <h3>
+        Our prototype serves to demonstrate all of the functionality that has been built
+        into our Pedestrian Backup Assist System (PBAS). Please click the buttons below
+        to go through our different scenarios. There are 4 scenarios that we want to 
+        depict with our prototype.
+      </h3>
+      <h4>
+        <ul>
+          <li>
+            <button 
+              type = "button"
+              onclick = "showNoObstacleDetectdStart()" 
+              id = "NoObstacleDetectedButtonStart">
+              No Obstacle Detected 
+            </button>
+          </li>
+          <li>
+            <button 
+              type = "button"
+              onclick = "showDriverBrakesStart()" 
+              id = "DriverBrakesButtonStart">
+              Obstacle Detected and the Driver Brakes 
+            </button>
+          </li>
+          <li>
+            <button 
+              type = "button"
+              onclick = "showSystemBrakesStart()" 
+              id = "SystemBrakesButtonStart">
+              Obstacle Detected and the System Brakes
+            </button>
+          </li>
+          <li>
+            <button 
+              type = "button"
+              onclick = "showNoBrakingOccursStart()" 
+              id = "NoBrakingOccursButtonStart">
+              Obstacle Detected and No Braking Occurs
+            </button>
+          </li>
+        </ul>
+      </h4>
 
-      <!-- Geeks pic -->
+      
+      <!-- Nothing detected pic -->
       <img 
-        id="geekPicID" 
-        src="https://media.geeksforgeeks.org/wp-content/uploads/20210915115837/gfg3.png"
+        id="nothingDetectedPic" 
+        src="https://lumiere-a.akamaihd.net/v1/images/screen-shot-2013-09-10-at-1_dcd9a9c6.jpeg"
         alt="GFG image" 
       />
 
-      <!-- Random pic -->
+      <!-- Nothing detected pic second thing -->
       <img 
-        id="randomPicID" 
-        src= "https://www.w3schools.com/howto/img_snow.jpg" 
+        id="nothingDetectedPic2" 
+        src="https://hips.hearstapps.com/pop.h-cdn.co/assets/17/42/1508535180-gettyimages-623682715.jpg"
         alt="GFG image" 
       />
+
+      <!-- Nothing detected pic second thing -->
+      <img 
+        id="nothingDetectedPic3" 
+        src="https://i.pinimg.com/474x/31/b3/4a/31b34a198288fa2e1b4e4ba7dbff8857.jpg"
+        alt="GFG image" 
+      />
+
+      <!-- Driver Brakes -->
+      <img 
+        id="driverBrakesPic" 
+        src= "https://thumbs.dreamstime.com/z/braking-to-avoid-running-over-pedestrian-cartoon-illustration-driver-159591811.jpg"
+        alt="GFG image" 
+      />
+
+      <!-- Driver Brakes -->
+      <img 
+        id="driverBrakesPic2" 
+        src= "https://static2.bigstockphoto.com/4/4/2/large1500/244518007.jpg"
+        alt="GFG image" 
+      />
+
+      <!-- Driver Brakes -->
+      <img 
+        id="driverBrakesPic3" 
+        src= "https://www.thenewsfetcher.com/wp-content/uploads/2021/02/Naruto-and-Nine-Tails.jpg"
+        alt="GFG image" 
+      />
+
+      <!-- System Brakes -->
+      <img 
+        id="systemBrakesPic" 
+        src= "https://thumbs.dreamstime.com/z/creative-design-car-no-brakes-message-car-no-brakes-message-158446760.jpg"
+        alt="GFG image" 
+      />
+      
+      <!-- System Brakes -->
+      <img 
+        id="systemBrakesPic2" 
+        src= "https://image.shutterstock.com/image-vector/policeman-show-stop-gesture-driver-260nw-1837782736.jpg"
+        alt="GFG image" 
+      />
+      
+      <!-- System Brakes -->
+      <img 
+        id="systemBrakesPic3" 
+        src= "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/06/Pikachu-color-model-publicity-cel.jpg"
+        alt="GFG image" 
+      />
+
+      <!-- No Brake -->
+      <img 
+        id="noBrakingPic" 
+        src= "https://thumbs.dreamstime.com/b/car-driver-slams-brakes-vector-illustration-58205770.jpg"
+        alt="GFG image" 
+      />
+
+      <!-- No Brake -->
+      <img 
+        id="noBrakingPic2" 
+        src= "https://comps.gograph.com/car-and-non-stop-message_gg121638539.jpg"
+        alt="GFG image" 
+      />
+
+      <!-- No Brake -->
+      <img 
+        id="noBrakingPic3" 
+        src= "https://i.ytimg.com/vi/u-_VrboErkg/mqdefault.jpg"
+        alt="GFG image" 
+      />
+
+      <!-- Next button for nothing detected subsection -->
+      <button 
+        type = "button"
+        onclick = "showNextAsset()" 
+        id = "ShowNextAssetButton">
+        Next
+      </button>
+
+      <!-- Previous button for nothing detected subsection -->
+      <button 
+        type = "button"
+        onclick = "showPreviousAsset()" 
+        id = "ShowPreviousAssetButton">
+        Previous
+      </button>
     </div>
   
-    <button type="button"
-      onclick="showGeeks()" id="geekButtonID">
-      Show Geek 
-    </button>
-
-    <button type="button"
-      onclick="showRandom()" id="randomButtonID">
-      Show Random 
-    </button>
-  
     <script>
-      function showGeeks() {
 
-        /* Access image by id and change
-        the display property to block*/
-        document.getElementById('geekPicID').style.display = "block";
-        document.getElementById('randomPicID').style.display = "none";
+      var noObstacleDetectedAssets = {
+        "nothingDetectedPic" : {
+          "display": "none",
+          "hasNext": true,
+          "hasPrevious": false, 
+        },
+        "nothingDetectedPic2": { 
+          "display": "none",
+          "hasNext": true,
+          "hasPrevious": true, 
+        },
+        "nothingDetectedPic3": { 
+          "display": "none",
+          "hasNext": false,
+          "hasPrevious": true, 
+        }
+      };
 
-        // document.getElementById('geekButtonID').style.display = "none";
-        // document.getElementById('randomButtonID').style.display = "block";
+      var driverBrakesAssets = {
+        "driverBrakesPic" : {
+          "display": "none",
+          "hasNext": true,
+          "hasPrevious": false, 
+        },
+        "driverBrakesPic2": { 
+          "display": "none",
+          "hasNext": true,
+          "hasPrevious": true, 
+        },
+        "driverBrakesPic3": { 
+          "display": "none",
+          "hasNext": false,
+          "hasPrevious": true, 
+        }
+      };
+
+      var systemBrakesAssets = {
+        "systemBrakesPic" : {
+          "display": "none",
+          "hasNext": true,
+          "hasPrevious": false, 
+        },
+        "systemBrakesPic2": { 
+          "display": "none",
+          "hasNext": true,
+          "hasPrevious": true, 
+        },
+        "systemBrakesPic3": { 
+          "display": "none",
+          "hasNext": false,
+          "hasPrevious": true, 
+        }
+
+      };
+
+      var noBrakingAssets = {
+        "noBrakingPic" : {
+          "display": "none",
+          "hasNext": true,
+          "hasPrevious": false, 
+        },
+        "noBrakingPic2": { 
+          "display": "none",
+          "hasNext": true,
+          "hasPrevious": true, 
+        },
+        "noBrakingPic3": { 
+          "display": "none",
+          "hasNext": false,
+          "hasPrevious": true, 
+        }
+      };
+
+      var userChoseNoObstacleDetected = false;
+      var userChoseDriverBrakes= false;
+      var userChoseSystemBrakes= false;
+      var userChoseNoBraking = false;
+
+      function showNoObstacleDetectdStart() {
+
+        // Show the correct picture
+        turnOffAllAssets();
+        noObstacleDetectedAssets["nothingDetectedPic"]["display"] = "block";
+        document.getElementById('nothingDetectedPic').style.display = noObstacleDetectedAssets["nothingDetectedPic"]["display"];
+
+        HandleNextPreviousButtons();
+
+        // Keep track of which option the user chose
+        HandleUserSelection( "noObstacleDetected" );
+
       }
 
-      function showRandom() {
+      function showDriverBrakesStart() {
 
-        /* Access image by id and change
-        the display property to block*/
-        document.getElementById('geekPicID').style.display = "none";
-        document.getElementById('randomPicID').style.display = "block";
+        // Show the correct picture
+        turnOffAllAssets();
+        driverBrakesAssets["driverBrakesPic"]["display"] = "block";
+        document.getElementById('driverBrakesPic').style.display = driverBrakesAssets["driverBrakesPic"]["display"];
 
-        // document.getElementById('geekButtonID').style.display = "none";
-        // document.getElementById('randomButtonID').style.display = "block";
+        HandleNextPreviousButtons();
+
+        // Keep track of which option the user chose
+        HandleUserSelection( "driverBrakes" );
+      }
+
+      function showSystemBrakesStart() {
+
+        // Show the correct picture
+        turnOffAllAssets();
+        systemBrakesAssets["systemBrakesPic"]["display"] = "block";
+        document.getElementById('systemBrakesPic').style.display = systemBrakesAssets["systemBrakesPic"]["display"];
+
+        HandleNextPreviousButtons();
+        
+        // Keep track of which option the user chose
+        HandleUserSelection( "systemBrakes" );
+      }
+      
+      function showNoBrakingOccursStart() {
+        
+        // Show the correct picture
+        turnOffAllAssets();
+        noBrakingAssets["noBrakingPic"]["display"] = "block";
+        document.getElementById('noBrakingPic').style.display = noBrakingAssets["noBrakingPic"]["display"];
+
+        HandleNextPreviousButtons();
+        
+        // Keep track of which option the user chose
+        HandleUserSelection( "noBraking" );
+      }
+      
+      function showNextAsset() {
+
+        let assetsToUse = userChoseNoObstacleDetected ? noObstacleDetectedAssets : 
+                          userChoseDriverBrakes ? driverBrakesAssets :
+                          userChoseSystemBrakes ? systemBrakesAssets : noBrakingAssets; 
+
+        // If there is another asset next, show it
+        let getNext, movedAlready = false;
+        Object.keys( assetsToUse ).forEach ( asset => {
+          let currentAsset = assetsToUse[asset];
+
+          if ( getNext && !movedAlready ) {
+            document.getElementById( asset ).style.display = "block";
+            currentAsset["display"] = "block";
+            if ( !currentAsset["hasNext"] ){
+              document.getElementById('ShowNextAssetButton').style.display = "none";
+            }
+            if ( currentAsset["hasPrevious"] ){
+              document.getElementById('ShowPreviousAssetButton').style.display = "block";
+            }
+
+            movedAlready = true;
+          }
+
+          if ( currentAsset["display"] == "block" && !movedAlready ) {
+            if ( currentAsset["hasNext"] ) {
+              getNext = true;
+              document.getElementById( asset ).style.display = "none";
+              currentAsset["display"] = "none";
+              console.log("stop displaying?");
+            }
+          }
+        });
+      }
+
+      function showPreviousAsset() {
+
+        let assetsToUse = userChoseNoObstacleDetected ? noObstacleDetectedAssets : 
+                          userChoseDriverBrakes ? driverBrakesAssets :
+                          userChoseSystemBrakes ? systemBrakesAssets : noBrakingAssets; 
+
+        // If there is another asset previously, show it
+        let getPrevious, movedAlready = false;
+        Object.keys( assetsToUse ).reverse().forEach ( asset => {
+          let currentAsset = assetsToUse[asset];
+
+            if ( getPrevious && !movedAlready ) {
+              document.getElementById( asset ).style.display = "block";
+              currentAsset["display"] = "block";
+              if ( !currentAsset["hasPrevious"] ){
+                document.getElementById('ShowPreviousAssetButton').style.display = "none";
+              }
+              if ( currentAsset["hasNext"] ) {
+                document.getElementById('ShowNextAssetButton').style.display = "block";
+              }
+              movedAlready = true;
+            }
+  
+            if ( currentAsset["display"] == "block" && !movedAlready ) {
+              if ( currentAsset["hasPrevious"] ) {
+                getPrevious = true;
+                document.getElementById( asset ).style.display = "none";
+                currentAsset["display"] = "none";
+  
+              }
+            }
+        });
+      }
+
+      function turnOffAllAssets() {
+
+        Object.keys( noObstacleDetectedAssets ).forEach ( asset => {
+          noObstacleDetectedAssets[asset]["display"] = "none";
+          document.getElementById( asset ).style.display = "none";
+        });
+        Object.keys( driverBrakesAssets ).forEach ( asset => {
+          driverBrakesAssets[asset]["display"] = "none";
+          document.getElementById( asset ).style.display = "none";
+        });
+        Object.keys( systemBrakesAssets ).forEach ( asset => {
+          systemBrakesAssets[asset]["display"] = "none";
+          document.getElementById( asset ).style.display = "none";
+        });
+        Object.keys( noBrakingAssets ).forEach ( asset => {
+          noBrakingAssets[asset]["display"] = "none";
+          document.getElementById( asset ).style.display = "none";
+        });
+
+      }
+
+      function HandleNextPreviousButtons() {
+        document.getElementById('ShowNextAssetButton').style.display = "block";
+        document.getElementById('ShowPreviousAssetButton').style.display = "none";
+      }
+
+      function HandleUserSelection( userSelection ) {
+
+        userChoseNoObstacleDetected = userSelection == "noObstacleDetected";
+        userChoseDriverBrakes = userSelection == "driverBrakes";
+        userChoseSystemBrakes = userSelection == "systemBrakes";
+        userChoseNoBraking = userSelection == "noBraking";
+
       }
       
     </script>
