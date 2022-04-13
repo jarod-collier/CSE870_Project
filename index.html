@@ -6,9 +6,17 @@
 
       /* Start with everything initially off */
       #nothingDetectedVid1, #nothingDetectedVid2, #nothingDetectedVid3,
-      #driverBrakesVid1, #driverBrakesVid2, #driverBrakesVid3, 
+      #nothingDetectedText1, #nothingDetectedText2, #nothingDetectedText3,
+
+      #driverBrakesVid1, #driverBrakesVid2, #driverBrakesVid3, #driverBrakesVid4,
+      #driverBrakesText1, #driverBrakesText2, #driverBrakesText3, #driverBrakesText4,
+
       #systemBrakesVid1, #systemBrakesVid2, #systemBrakesVid3, #systemBrakesVid4, #systemBrakesVid5,
-      #noBrakingVid1, #noBrakingVid2, #noBrakingVid3, 
+      #systemBrakesText1, #systemBrakesText2, #systemBrakesText3, #systemBrakesText4, #systemBrakesText5, 
+
+      #noBrakingVid1, #noBrakingVid2, #noBrakingVid3, #noBrakingVid4,
+      #noBrakingText1, #noBrakingText2, #noBrakingText3, #noBrakingText4,
+
       #ShowPreviousAssetButton, #ShowNextAssetButton {
         display: none;
       }
@@ -94,6 +102,11 @@
         Your browser does not support the video tag.
       </video>
 
+      <video width="320" height="240" id="driverBrakesVid4" controls autoplay >
+        <source src="https://drive.google.com/file/d/1dRLqKypkNAg8Tsxi5m4l5Gv7zBEouIIO/view?usp=sharing" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
       <!-- System Brakes -->
       <video width="320" height="240" id="systemBrakesVid1" controls autoplay >
         <source src="https://drive.google.com/file/d/1WxO-0UAU6HAHhXcFvY22IHt-Nkc723r3/view?usp=sharing" type="video/mp4">
@@ -136,6 +149,85 @@
         Your browser does not support the video tag.
       </video>
 
+      <video width="320" height="240" id="noBrakingVid4" controls autoplay >
+        <source src="https://drive.google.com/file/d/1zxhKaXeWrjF54hsN-kvzkyArsqcgiyNT/view?usp=sharing" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <!-- Nothing detected text -->
+      <p id="nothingDetectedText1">
+        testing nothing detected 1
+      </p>
+
+      <p id="nothingDetectedText2">
+        testing nothing detected 2 
+      </p>
+
+      <p id="nothingDetectedText3">
+        testing nothing detected 3 
+      </p>
+
+      <!-- Driver Brakes text-->
+      <p id="driverBrakesText1">
+        testing driver brakes 1 
+      </p>
+
+      <p id="driverBrakesText2">
+        testing driver brakes 2 
+      </p>
+
+      <p id="driverBrakesText3">
+        testing driver brakes 3 
+      </p>
+
+      <p id="driverBrakesText4">
+        testing driver brakes 4 
+      </p>
+
+      <!-- System Brakes Text -->
+      <p id="systemBrakesText1">
+        The driver shifts the gear into reverse.
+        The VSES recognizes change in vehicle state and starts the PBAS.
+        The camera and distance sensor turns on and the video feed is displayed on the infotainment console.
+        The guiding lines are overlaid on the video feed.
+      </p>
+
+      <p id="systemBrakesText2">
+        The driver backs up the vehicle.
+      </p>
+
+      <p id="systemBrakesText3">
+        An obstacle moves into the path of the vehicle and is detected.
+        The obstacle detection graphic is displayed over the obstacle on the infotainment console.
+        The aural alert is played and the steering wheel rumbles.
+        Since the obstacle was too close to the vehicle and in the critical distance zone, the system engaged the car brakes without driver input.
+      </p>
+
+      <p id="systemBrakesText4">
+        The obstacle moves outside of the critical distance zones, which allows the system to give the driver back control. 
+      </p>
+
+      <p id="systemBrakesText5">
+        The driver completes their backing event and continues operation of the vehicle as normal.
+      </p>
+
+      <!-- No Braking Text-->
+      <p id="noBrakingText1">
+        testing driver brakes 1 
+      </p>
+
+      <p id="noBrakingText2">
+        testing driver brakes 2 
+      </p>
+
+      <p id="noBrakingText3">
+        testing driver brakes 3 
+      </p>
+
+      <p id="noBrakingText4">
+        testing driver brakes 4 
+      </p>
+
       <!-- Previous button for nothing detected subsection -->
       <button 
         type = "button"
@@ -157,84 +249,126 @@
     <script>
 
       var noObstacleDetectedAssets = {
-        "nothingDetectedVid1" : {
+        "nothingDetectedVid1": {
           "display": "none",
           "hasNext": true,
           "hasPrevious": false, 
+          "textId": "nothingDetectedText1",
+          "textVisibility": "none"
         },
         "nothingDetectedVid2": { 
           "display": "none",
           "hasNext": true,
           "hasPrevious": true, 
+          "textId": "nothingDetectedText2",
+          "textVisibility": "none"
         },
         "nothingDetectedVid3": { 
           "display": "none",
           "hasNext": false,
           "hasPrevious": true, 
+          "textId": "nothingDetectedText3",
+          "textVisibility": "none"
         }
       };
 
       var driverBrakesAssets = {
-        "driverBrakesVid1" : {
+        "driverBrakesVid1": {
           "display": "none",
           "hasNext": true,
           "hasPrevious": false, 
+          "textId": "driverBrakesText1",
+          "textVisibility": "none"
         },
         "driverBrakesVid2": { 
           "display": "none",
           "hasNext": true,
           "hasPrevious": true, 
+          "textId": "driverBrakesText2",
+          "textVisibility": "none"
         },
         "driverBrakesVid3": { 
           "display": "none",
+          "hasNext": true,
+          "hasPrevious": true, 
+          "textId": "driverBrakesText3",
+          "textVisibility": "none"
+        },
+        "driverBrakesVid4": { 
+          "display": "none",
           "hasNext": false,
           "hasPrevious": true, 
+          "textId": "driverBrakesText4",
+          "textVisibility": "none"
         }
       };
 
       var systemBrakesAssets = {
-        "systemBrakesVid1" : {
+        "systemBrakesVid1": {
           "display": "none",
           "hasNext": true,
           "hasPrevious": false, 
+          "textId": "systemBrakesText1",
+          "textVisibility": "none"
         },
         "systemBrakesVid2": { 
           "display": "none",
           "hasNext": true,
-          "hasPrevious": true, 
+          "hasPrevious": true,
+          "textId": "systemBrakesText2",
+          "textVisibility": "none"
         },
         "systemBrakesVid3": { 
           "display": "none",
           "hasNext": true,
-          "hasPrevious": true, 
+          "hasPrevious": true,
+          "textId": "systemBrakesText3",
+          "textVisibility": "none"
         },
         "systemBrakesVid4": { 
           "display": "none",
           "hasNext": true,
-          "hasPrevious": true, 
+          "hasPrevious": true,
+          "textId": "systemBrakesText4",
+          "textVisibility": "none"
         },
         "systemBrakesVid5": { 
           "display": "none",
           "hasNext": false,
-          "hasPrevious": true, 
+          "hasPrevious": true,
+          "textId": "systemBrakesText5",
+          "textVisibility": "none"
         }
       };
 
       var noBrakingAssets = {
-        "noBrakingVid1" : {
+        "noBrakingVid1": {
           "display": "none",
           "hasNext": true,
           "hasPrevious": false, 
+          "textId": "noBrakingText1",
+          "textVisibility": "none"
         },
         "noBrakingVid2": { 
           "display": "none",
           "hasNext": true,
           "hasPrevious": true, 
+          "textId": "noBrakingText2",
+          "textVisibility": "none"
         },
         "noBrakingVid3": { 
           "display": "none",
+          "hasNext": true,
+          "hasPrevious": true, 
+          "textId": "noBrakingText3",
+          "textVisibility": "none"
+        },
+        "noBrakingVid4": { 
+          "display": "none",
           "hasNext": false,
           "hasPrevious": true, 
+          "textId": "noBrakingText4",
+          "textVisibility": "none"
         }
       };
 
@@ -247,9 +381,15 @@
 
         // Show the correct picture
         turnOffAllAssets();
+        
+        // Turn on the initial video
         noObstacleDetectedAssets["nothingDetectedVid1"]["display"] = "block";
         document.getElementById('nothingDetectedVid1').style.display = noObstacleDetectedAssets["nothingDetectedVid1"]["display"];
 
+        // Turn on the initial text 
+        noObstacleDetectedAssets["nothingDetectedVid1"]["textVisibility"] = "block";
+        document.getElementById( noObstacleDetectedAssets["nothingDetectedVid1"]["textId"] ).style.display = noObstacleDetectedAssets["nothingDetectedVid1"]["textVisibility"];
+        
         HandleNextPreviousButtons();
 
         // Keep track of which option the user chose
@@ -261,8 +401,14 @@
 
         // Show the correct picture
         turnOffAllAssets();
+        
+        // Turn on the initial video
         driverBrakesAssets["driverBrakesVid1"]["display"] = "block";
         document.getElementById('driverBrakesVid1').style.display = driverBrakesAssets["driverBrakesVid1"]["display"];
+
+        // Turn on the initial text 
+        driverBrakesAssets["driverBrakesVid1"]["textVisibility"] = "block";
+        document.getElementById( driverBrakesAssets["driverBrakesVid1"]["textId"] ).style.display = driverBrakesAssets["driverBrakesVid1"]["textVisibility"];
 
         HandleNextPreviousButtons();
 
@@ -274,8 +420,14 @@
 
         // Show the correct picture
         turnOffAllAssets();
+        
+        // Turn on the video
         systemBrakesAssets["systemBrakesVid1"]["display"] = "block";
         document.getElementById('systemBrakesVid1').style.display = systemBrakesAssets["systemBrakesVid1"]["display"];
+
+        // Turn on the accompanying text 
+        systemBrakesAssets["systemBrakesVid1"]["textVisibility"] = "block";
+        document.getElementById( systemBrakesAssets["systemBrakesVid1"]["textId"] ).style.display = systemBrakesAssets["systemBrakesVid1"]["textVisibility"];
 
         HandleNextPreviousButtons();
         
@@ -287,8 +439,14 @@
         
         // Show the correct picture
         turnOffAllAssets();
+        
+        // Turn on the original video
         noBrakingAssets["noBrakingVid1"]["display"] = "block";
         document.getElementById('noBrakingVid1').style.display = noBrakingAssets["noBrakingVid1"]["display"];
+
+        // Turn on the text
+        noBrakingAssets["noBrakingVid1"]["textVisibility"] = "block";
+        document.getElementById( noBrakingAssets["noBrakingVid1"]["textId"] ).style.display = noBrakingAssets["noBrakingVid1"]["textVisibility"];
 
         HandleNextPreviousButtons();
         
@@ -308,8 +466,15 @@
           let currentAsset = assetsToUse[asset];
 
           if ( getNext && !movedAlready ) {
+
+            // Turn the video on
             document.getElementById( asset ).style.display = "block";
             currentAsset["display"] = "block";
+
+            // Turn the text on
+            document.getElementById( currentAsset["textId"] ).style.display = "block";
+            currentAsset["textVisibility"] = "block";
+
             if ( !currentAsset["hasNext"] ){
               document.getElementById('ShowNextAssetButton').style.display = "none";
             }
@@ -323,8 +488,14 @@
           if ( currentAsset["display"] == "block" && !movedAlready ) {
             if ( currentAsset["hasNext"] ) {
               getNext = true;
+
+              // Turn the video off
               document.getElementById( asset ).style.display = "none";
               currentAsset["display"] = "none";
+
+              // Turn the text off 
+              document.getElementById( currentAsset["textId"] ).style.display = "none";
+              currentAsset["textVisibility"] = "none";
             }
           }
         });
@@ -342,8 +513,15 @@
           let currentAsset = assetsToUse[asset];
 
             if ( getPrevious && !movedAlready ) {
+              
+              // Turn the video on
               document.getElementById( asset ).style.display = "block";
               currentAsset["display"] = "block";
+
+              // Turn the text on
+              document.getElementById( currentAsset["textId"] ).style.display = "block";
+              currentAsset["textVisibility"] = "block";
+
               if ( !currentAsset["hasPrevious"] ){
                 document.getElementById('ShowPreviousAssetButton').style.display = "none";
               }
@@ -356,9 +534,14 @@
             if ( currentAsset["display"] == "block" && !movedAlready ) {
               if ( currentAsset["hasPrevious"] ) {
                 getPrevious = true;
+
+                // Turn the video off
                 document.getElementById( asset ).style.display = "none";
                 currentAsset["display"] = "none";
   
+                // Turn the text off 
+                document.getElementById( currentAsset["textId"] ).style.display = "none";
+                currentAsset["textVisibility"] = "none";
               }
             }
         });
@@ -369,18 +552,30 @@
         Object.keys( noObstacleDetectedAssets ).forEach ( asset => {
           noObstacleDetectedAssets[asset]["display"] = "none";
           document.getElementById( asset ).style.display = "none";
+
+          noObstacleDetectedAssets[asset]["textVisibility"] = "none";
+          document.getElementById( noObstacleDetectedAssets[asset]["textId"] ).style.display = "none";
         });
         Object.keys( driverBrakesAssets ).forEach ( asset => {
           driverBrakesAssets[asset]["display"] = "none";
           document.getElementById( asset ).style.display = "none";
+
+          driverBrakesAssets[asset]["textVisibility"] = "none";
+          document.getElementById( driverBrakesAssets[asset]["textId"] ).style.display = "none";
         });
         Object.keys( systemBrakesAssets ).forEach ( asset => {
           systemBrakesAssets[asset]["display"] = "none";
           document.getElementById( asset ).style.display = "none";
+
+          systemBrakesAssets[asset]["textVisibility"] = "none";
+          document.getElementById( systemBrakesAssets[asset]["textId"] ).style.display = "none";
         });
         Object.keys( noBrakingAssets ).forEach ( asset => {
           noBrakingAssets[asset]["display"] = "none";
           document.getElementById( asset ).style.display = "none";
+
+          noBrakingAssets[asset]["textVisibility"] = "none";
+          document.getElementById( noBrakingAssets[asset]["textId"] ).style.display = "none";
         });
 
       }
