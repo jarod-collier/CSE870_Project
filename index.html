@@ -5,6 +5,8 @@
     <style>
 
       /* Start with everything initially off */
+	  #noObstacleTitle, #obstacleDetectedDriverBrakesTitle, #obstacleDetectedSystemBrakesTitle, #obstacleDetectedNoBrakesTitle,
+	  
       #nothingDetectedVid1, #nothingDetectedVid2, #nothingDetectedVid3,
       #nothingDetectedText1, #nothingDetectedText2, #nothingDetectedText3,
 
@@ -70,96 +72,115 @@
         </ul>
       </h4>
 
+	  <!-- No Obstacle Title -->
+	  <p id="noObstacleTitle" >
+	  No Obstacle Detected
+	  </p>
+	  
+	  <!-- Obstacle Detected Driver Brakes Title -->
+	  <p id="obstacleDetectedDriverBrakesTitle" >
+	  Obstacle Detected and the Driver Brakes
+	  </p>
+	  
+	  <!-- Obstacle Detected System Brakes Title -->
+	  <p id="obstacleDetectedSystemBrakesTitle" >
+	  Obstacle Detected and the System Brakes
+	  </p>
+	  
+	  <!-- Obstacle Detected No Brakes Title -->
+	  <p id="obstacleDetectedNoBrakesTitle" >
+	  Obstacle Detected and No Braking Occurs
+	  </p>
+	  
       <!-- Nothing detected pic -->
-      <video width="320" height="240" id="nothingDetectedVid1" controls autoplay >
+      <video width="320" height="240" id="nothingDetectedVid1" controls >
         <source
         src="./CSE870_ProjectVideos/NoObstacleDetected/NoObstacleDetected1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video width="320" height="240" id="nothingDetectedVid2" controls autoplay >
+      <video width="320" height="240" id="nothingDetectedVid2" controls >
         <source
         src="./CSE870_ProjectVideos/NoObstacleDetected/NoObstacleDetected2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-
-      <video width="320" height="240" id="nothingDetectedVid3" controls autoplay >
+      <video width="320" height="240" id="nothingDetectedVid3" controls >
         <source
         src="./CSE870_ProjectVideos/NoObstacleDetected/NoObstacleDetected3.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
       <!-- Driver Brakes -->
-      <video width="320" height="240" id="driverBrakesVid1" controls autoplay >
+      <video width="320" height="240" id="driverBrakesVid1" controls >
         <source
         src="./CSE870_ProjectVideos/ObstacleDetectedDriverBrake/ObstacleDetectedDriverBrake1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video width="320" height="240" id="driverBrakesVid2" controls autoplay >
+      <video width="320" height="240" id="driverBrakesVid2" controls >
         <source
         src="./CSE870_ProjectVideos/ObstacleDetectedDriverBrake/ObstacleDetectedDriverBrake2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video width="320" height="240" id="driverBrakesVid3" controls autoplay >
+      <video width="320" height="240" id="driverBrakesVid3" controls >
         <source
         src="./CSE870_ProjectVideos/ObstacleDetectedDriverBrake/ObstacleDetectedDriverBrake3.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video width="320" height="240" id="driverBrakesVid4" controls autoplay >
+      <video width="320" height="240" id="driverBrakesVid4" controls >
         <source
         src="./CSE870_ProjectVideos/ObstacleDetectedDriverBrake/ObstacleDetectedDriverBrake4.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
       <!-- System Brakes -->
-      <video width="320" height="240" id="systemBrakesVid1" controls autoplay >
+      <video width="320" height="240" id="systemBrakesVid1" controls >
         <source src="./CSE870_ProjectVideos/SystemStops/SystemStops1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       
-      <video width="320" height="240" id="systemBrakesVid2" controls autoplay >
+      <video width="320" height="240" id="systemBrakesVid2" controls >
         <source src="./CSE870_ProjectVideos/SystemStops/SystemStops2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       
-      <video width="320" height="240" id="systemBrakesVid3" controls autoplay >
+      <video width="320" height="240" id="systemBrakesVid3" controls >
         <source src="./CSE870_ProjectVideos/SystemStops/SystemStops3.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video width="320" height="240" id="systemBrakesVid4" controls autoplay >
+      <video width="320" height="240" id="systemBrakesVid4" controls >
         <source src="./CSE870_ProjectVideos/SystemStops/SystemStops4.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video width="320" height="240" id="systemBrakesVid5" controls autoplay >
+      <video width="320" height="240" id="systemBrakesVid5" controls >
         <source src="./CSE870_ProjectVideos/SystemStops/SystemStops5.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
       <!-- No Brake -->
-      <video width="320" height="240" id="noBrakingVid1" controls autoplay >
+      <video width="320" height="240" id="noBrakingVid1" controls >
         <source
         src="./CSE870_ProjectVideos/ObstacleDetectedNoBrake/ObstacleDetectedNoBrake1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video width="320" height="240" id="noBrakingVid2" controls autoplay >
+      <video width="320" height="240" id="noBrakingVid2" controls >
         <source
         src="./CSE870_ProjectVideos/ObstacleDetectedNoBrake/ObstacleDetectedNoBrake2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video width="320" height="240" id="noBrakingVid3" controls autoplay >
+      <video width="320" height="240" id="noBrakingVid3" controls >
         <source
         src="./CSE870_ProjectVideos/ObstacleDetectedNoBrake/ObstacleDetectedNoBrake3.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video width="320" height="240" id="noBrakingVid4" controls autoplay >
+      <video width="320" height="240" id="noBrakingVid4" controls >
         <source
         src="./CSE870_ProjectVideos/ObstacleDetectedNoBrake/ObstacleDetectedNoBrake4.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -403,10 +424,12 @@
       var userChoseNoBraking = false;
 
       function showNoObstacleDetectdStart() {
-
         // Show the correct picture
         turnOffAllAssets();
         
+		// Show Title
+		document.getElementById( "noObstacleTitle" ).style.display = "block";
+		
         // Turn on the initial video
         noObstacleDetectedAssets["nothingDetectedVid1"]["display"] = "block";
         document.getElementById('nothingDetectedVid1').style.display = noObstacleDetectedAssets["nothingDetectedVid1"]["display"];
@@ -423,10 +446,12 @@
       }
 
       function showDriverBrakesStart() {
-
         // Show the correct picture
         turnOffAllAssets();
-        
+		
+		// Show Title
+		document.getElementById( "obstacleDetectedDriverBrakesTitle").style.display = "block";
+		
         // Turn on the initial video
         driverBrakesAssets["driverBrakesVid1"]["display"] = "block";
         document.getElementById('driverBrakesVid1').style.display = driverBrakesAssets["driverBrakesVid1"]["display"];
@@ -442,9 +467,11 @@
       }
 
       function showSystemBrakesStart() {
-
         // Show the correct picture
         turnOffAllAssets();
+		
+		// Show Title
+		document.getElementById( "obstacleDetectedSystemBrakesTitle" ).style.display = "block";
         
         // Turn on the video
         systemBrakesAssets["systemBrakesVid1"]["display"] = "block";
@@ -461,10 +488,13 @@
       }
       
       function showNoBrakingOccursStart() {
-        
         // Show the correct picture
         turnOffAllAssets();
         
+		// Show title
+		document.getElementById( "obstacleDetectedNoBrakesTitle" ).style.display = "block";
+
+		
         // Turn on the original video
         noBrakingAssets["noBrakingVid1"]["display"] = "block";
         document.getElementById('noBrakingVid1').style.display = noBrakingAssets["noBrakingVid1"]["display"];
@@ -573,7 +603,11 @@
       }
 
       function turnOffAllAssets() {
-
+		document.getElementById( "noObstacleTitle" ).style.display = "none";
+		document.getElementById( "obstacleDetectedDriverBrakesTitle" ).style.display = "none";
+		document.getElementById( "obstacleDetectedSystemBrakesTitle" ).style.display = "none";
+		document.getElementById( "obstacleDetectedNoBrakesTitle" ).style.display = "none";
+		
         Object.keys( noObstacleDetectedAssets ).forEach ( asset => {
           noObstacleDetectedAssets[asset]["display"] = "none";
           document.getElementById( asset ).style.display = "none";
